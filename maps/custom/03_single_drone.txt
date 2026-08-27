@@ -1,0 +1,7 @@
+# VALID: minimal edge case, one drone, start adjacent to goal. Expect 1 turn.
+nb_drones: 1
+
+start_hub: start 0 0
+end_hub: goal 1 0
+
+connection: start-goal

@@ -1,0 +1,9 @@
+# ERROR: metadata bracket is never closed
+nb_drones: 2
+
+start_hub: start 0 0
+hub: mid 1 0 [color=blue max_drones=2
+end_hub: goal 2 0
+
+connection: start-mid
+connection: mid-goal

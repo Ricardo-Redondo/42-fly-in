@@ -1,0 +1,8 @@
+__pycache__
+.mypy_cache
+*.py[cod]
+*.egg-info
+.venv
+.uv
+.env
+fly-in.pdf

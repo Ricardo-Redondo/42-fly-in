@@ -1,0 +1,7 @@
+# ERROR: no end_hub defined
+nb_drones: 2
+
+start_hub: start 0 0
+hub: mid 1 0
+
+connection: start-mid

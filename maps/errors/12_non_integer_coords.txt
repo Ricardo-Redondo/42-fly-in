@@ -1,0 +1,9 @@
+# ERROR: coordinates must be integers
+nb_drones: 2
+
+start_hub: start 0 0
+hub: mid 1.5 0
+end_hub: goal 2 0
+
+connection: start-mid
+connection: mid-goal

@@ -1,0 +1,9 @@
+# VALID FILE, UNSOLVABLE MAP: no route from start to goal.
+# Must fail gracefully with a clear message, not hang or crash.
+nb_drones: 3
+
+start_hub: start 0 0
+hub: island 1 1
+end_hub: goal 5 0
+
+connection: start-island

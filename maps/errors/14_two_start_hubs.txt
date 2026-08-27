@@ -1,0 +1,9 @@
+# ERROR: exactly one start_hub is allowed
+nb_drones: 2
+
+start_hub: start 0 0
+start_hub: other_start 0 1
+end_hub: goal 2 0
+
+connection: start-goal
+connection: other_start-goal

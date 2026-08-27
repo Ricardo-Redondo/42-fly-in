@@ -1,0 +1,7 @@
+# ERROR: no start_hub defined
+nb_drones: 2
+
+hub: mid 1 0
+end_hub: goal 2 0
+
+connection: mid-goal

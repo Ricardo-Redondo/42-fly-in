@@ -1,0 +1,15 @@
+# VALID: blocked zone must be excluded from all paths.
+# No provided map uses zone=blocked, so this is the only test for it.
+# Correct answer: both drones route start -> detour -> goal (2 turns each),
+# never through 'wall'.
+nb_drones: 2
+
+start_hub: start 0 0 [color=green]
+hub: wall 1 0 [zone=blocked color=gray max_drones=5]
+hub: detour 1 1 [color=blue max_drones=2]
+end_hub: goal 2 0 [color=red]
+
+connection: start-wall
+connection: wall-goal
+connection: start-detour [max_link_capacity=2]
+connection: detour-goal [max_link_capacity=2]
