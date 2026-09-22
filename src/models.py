@@ -65,7 +65,9 @@ class Zone(BaseModel):
     @property
     def entry_cost(self) -> int:
         if not self.is_passable:
-            raise ValueError(f"zone {self.name!r} is blocked and cannot be entered")
+            raise ValueError(
+                f"zone {self.name!r} is blocked and cannot be entered"
+            )
         return 2 if self.zone_type is ZoneType.RESTRICTED else 1
 
 

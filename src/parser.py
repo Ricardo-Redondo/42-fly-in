@@ -21,7 +21,7 @@ def _has_route(
     start: str,
     end: str,
 ) -> bool:
-    """Whether `end` is reachable from `start` without crossing a blocked zone."""
+    """Whether `end` is reachable from `start` avoiding blocked zones."""
     adjacency: dict[str, list[str]] = {name: [] for name in zones}
     for link in connections:
         adjacency[link.a].append(link.b)
@@ -241,5 +241,5 @@ class MapParser:
             zones=zones,
             connections=connections,
             start=start,
-            end=end,
+            end=end
         )
