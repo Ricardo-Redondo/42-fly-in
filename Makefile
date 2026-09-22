@@ -10,6 +10,9 @@ run: ensure-uv
 	uv run python3 src
 
 trun: ensure-uv
+	uv run python3 src --renderer=terminal
+
+nvrun: ensure-uv
 	uv run python3 src --no-visual
 
 debug: ensure-uv

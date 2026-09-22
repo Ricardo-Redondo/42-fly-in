@@ -36,7 +36,8 @@ your machine.
 ```sh
 make install       # install dependencies
 make run           # run interactively -- pick a map, pygame view
-make trun          # run interactively -- pick a map, no visual, log only
+make trun          # run interactively -- pick a map, terminal view
+make nvrun         # run interactively -- pick a map, no visual, only log
 make lint          # flake8 + mypy (project-required flags)
 make lint-strict   # flake8 + mypy --strict
 make test          # pytest
