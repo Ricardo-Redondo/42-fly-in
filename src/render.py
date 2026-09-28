@@ -99,7 +99,9 @@ def _replay(fly_map: FlyMap, turns: list[Turn]) -> list[dict[str, list[int]]]:
 
 
 class Renderer(ABC):
-    """Hand it the map and the list of turns; it shows the run."""
+    """
+    Hand it the map and the list of turns; it shows the run.
+    """
 
     def pick_map(self, maps: list[Path]) -> Path | None:
         """Default picker: numbered terminal prompt.

@@ -36,26 +36,13 @@ def parse_args() -> Namespace:
             "visual backend (falls back to terminal if pygame is unavailable)"
         ),
     )
-    # parser.add_argument(
-    #     "--capacity-info",
-    #     action="store_true"
-    # )
     return parser.parse_args()
 
 
 def print_log(turns: list[Turn]) -> None:
     for turn in turns:
         print(turn.render_line())
-        # for zone, used in turn.zone_occ.items():
-        #     cap = fly_map.zones[zone].max_drones
-        #     print(f"Zone {zone}: {used}/{cap} drones")
-        # for label, used in turn.link_load.items():
-        #     a, b = label.split("-")
-        #     cap = 1
-        #     for conn in fly_map.connections:
-        #         if {conn.a, conn.b} == {a, b}:
-        #             cap = c.max_link_capacity
-        #     print(f"Connection {label}: {used}/{cap} used")
+        print()
     print(f"\n{len(turns)} turns", file=sys.stderr)
 
 
@@ -94,10 +81,15 @@ def main() -> int:
         renderer.play(fly_map, turns)
         # TerminalRenderer clears the screen on exit -- reprint so the
         # log is still the last thing visible instead of a blank screen
-        print_log(turns)
+        if args.renderer == "terminal":
+            print_log(turns)
 
     return 0
 
 
 if __name__ == "__main__":
-    sys.exit(main())
+    try:
+        sys.exit(main())
+    except KeyboardInterrupt:
+        print("\naborted")
+        sys.exit(1)

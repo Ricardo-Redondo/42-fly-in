@@ -111,16 +111,6 @@ class PathFinder:
         The k-th (0-indexed) drone to take a path of cost L and
         capacity c lands on turn L + k // c (drones stream in
         c at a time, one wave per turn).
-
-        TODO:
-          * assignments = [Assignment(p) for p in paths]
-          * for drone_id in range(1, nb_drones + 1):
-                choose the assignment minimising
-                    a.path.cost + len(a.drone_ids) // a.path.capacity
-                and append drone_id to it
-          * return only the assignments that received at least one drone
-          * if paths is empty, raise -- the map should have been
-            rejected earlier
         """
         if not paths:
             raise ValueError("no paths to distribute drones over")

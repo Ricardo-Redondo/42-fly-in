@@ -1,0 +1,9 @@
+# ERROR: start hub is blocked
+nb_drones: 2
+
+start_hub: start 0 0 [zone=blocked]
+hub: mid 1 0 [color=blue max_drones=2]
+end_hub: goal 2 0
+
+connection: start-mid
+connection: mid-goal

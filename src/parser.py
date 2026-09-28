@@ -233,6 +233,10 @@ class MapParser:
         if end is None:
             raise MapError("map has no end_hub")
 
+        if zones[start].zone_type == "blocked" or \
+                zones[end].zone_type == "blocked":
+            raise MapError("start and/or end hub\\s cannot be blocked")
+
         if not _has_route(zones, connections, start, end):
             raise MapError(f"no route from {start!r} to {end!r}")
 
